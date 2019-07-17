@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <cpn :cinfo="info"></cpn>
+    </div>
+    <template id="cpn">
+        <h2>{{cinfo}}</h2>
+    </template>
+    <script>
+        const cpn = {
+            template:'#cpn',
+            props:{
+                cinfo:{
+                    type:Object,
+                    default(){
+                        return{}
+                    }
+                }
+            }
+        }
+
+        const app = new Vue({
+            el:"#app",
+            data:{
+               info:{
+                   name:'why',
+                   age:18,
+                   height:1.88
+               }
+            },
+            components:{
+                cpn
+            }
+        })
+    </script>
+</body>
+</html>

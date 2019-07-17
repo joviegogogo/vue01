@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+    <div id="app">
+        <img :src="imgure" alt="">
+    </div>
+    <script>
+        const app = new Vue({
+            el:"#app",
+            data:{
+                imgure:"https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1562824376&di=fce9cdc8aa5169c6d65568d8dfcbe045&src=http://r.bstatic.com/images/hotel/max1024x768/987/98767654.jpg"
+            }
+        })
+    </script>
+</body>
+</html>
